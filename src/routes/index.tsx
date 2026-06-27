@@ -8,15 +8,17 @@ import {
 import heroImg from "@/assets/hero-control.jpg";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 import chaosImg from "@/assets/chaos.jpg";
-import profileImg from "@/assets/ai-employee-card.jpg.asset.json";
 import orgImg from "@/assets/orgchart.jpg";
 import cityImg from "@/assets/city.jpg";
-import foundersCollective from "@/assets/founders-collective.jpg.asset.json";
+import profileImg from "@/assets/ai-employee-card.jpg";
 import lc1 from "@/assets/lifecycle-1.jpg";
 import lc2 from "@/assets/lifecycle-2.jpg";
 import lc3 from "@/assets/lifecycle-3.jpg";
 import lc4 from "@/assets/lifecycle-4.jpg";
 import govImg from "@/assets/governance.jpg";
+import foundersImage from "@/assets/founder_image.png";
+import orvanttaIcon from "@/assets/orvantta-icon.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -86,7 +88,7 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/75 border-b border-border/60">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
-          <img src="/__l5e/assets-v1/a9ec57ad-1ab6-4b12-a052-457bbdffeae6/orvantta-icon.png" alt="Orvantta AI logo" width={32} height={32} className="size-8 anim-pulse-glow" />
+          <img src={orvanttaIcon} alt="Orvantta AI logo" width={32} height={32} className="size-8 anim-pulse-glow" />
           <span className="font-display font-bold tracking-tight text-lg">Orvantta AI</span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm font-mono uppercase tracking-widest text-muted-foreground">
@@ -311,7 +313,7 @@ function Profile() {
           <div className="relative anim-float">
             <div className="absolute -inset-10 bg-cyan/20 blur-3xl rounded-full" />
             <div className="relative rounded-2xl overflow-hidden border-2 border-navy shadow-2xl">
-              <img src={profileImg.url} alt="AI employee identity card" width={1024} height={1024} className="w-full h-auto block" loading="lazy" />
+              <img src={profileImg} alt="AI employee identity card" width={1024} height={1024} className="w-full h-auto block" loading="lazy" />
             </div>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 navy-card rounded-full px-5 py-2.5 font-mono text-[10px] uppercase tracking-widest flex items-center gap-2">
               <span className="size-1.5 rounded-full bg-cyan anim-blink" />
@@ -735,7 +737,7 @@ function Team() {
           <Reveal>
             <div className="relative rounded-2xl overflow-hidden border-2 border-navy group">
               <img
-                src={foundersCollective.url}
+                src={foundersImage}
                 alt="Orvantta AI founders team photo"
                 width={1280}
                 height={960}
